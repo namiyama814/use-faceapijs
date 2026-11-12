@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#ffffff" />
+  <meta name="description" content="Webカメラの表情をブラウザ内でリアルタイムに解析します。" />
+  <title>表情解析</title>
+  <script defer src="%BASE_URL%vendor/face-api.min.js"></script>
+  <script type="module" src="/src/main.js"></script>
+</head>
+<body>
+  <main class="workspace">
+    <section class="camera-panel" aria-label="カメラ">
+      <div class="viewport" id="viewport">
+        <video id="video" autoplay muted playsinline></video>
+        <button id="start">カメラを開始</button>
+      </div>
+      <p id="message" role="status" aria-live="polite"></p>
+    </section>
+    <p class="expression" aria-live="polite" aria-atomic="true"><span id="dominant-name">解析中</span></p>
+  </main>
+</body>
+</html>
